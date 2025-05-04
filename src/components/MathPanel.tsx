@@ -12,25 +12,27 @@ export default function MathPanel() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col space-y-6">
       <button
-        className="p-2 bg-green-600 text-white rounded mb-4"
         onClick={fetchExplanation}
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
       >
         Explore Mathematical Equivalent for this Query
       </button>
+
       {explanation && (
-        <div className="bg-white p-2 rounded shadow">
-          <h3 className="font-bold">Mathematical Explanation:</h3>
+        <div className="bg-white border border-gray-300 p-4 rounded shadow text-sm space-y-2">
+          <h2 className="font-semibold text-base">Mathematical Explanation:</h2>
           <p>{explanation}</p>
         </div>
       )}
+
       {showChat && (
-        <div className="mt-4 p-2 bg-gray-100 rounded">
-          <strong>Chat about this math:</strong>
-          <p>[Chat UI placeholder]</p>
+        <div className="text-sm italic text-gray-500">
+          (Chat component placeholder)
         </div>
       )}
     </div>
   );
 }
+

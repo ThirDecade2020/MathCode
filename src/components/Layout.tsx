@@ -4,24 +4,25 @@ import MathPanel from './MathPanel';
 
 export default function Layout() {
   return (
-    <div className="min-h-screen w-screen flex">
-      {/* Left panel */}
-      <div className="w-1/4 p-4 overflow-y-auto border-r">
+    <div className="flex w-full min-h-screen bg-gray-50 p-6 gap-8">
+      {/* Left column */}
+      <div className="w-1/4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
         <QueryPromptList />
       </div>
 
-      {/* Center panel */}
-      <div className="w-2/4 p-4 border-r">
+      {/* Center column */}
+      <div className="w-2/4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
         <EditorPanel />
       </div>
 
-      {/* Right panel */}
-      <div className="w-1/4 p-4 overflow-y-auto">
+      {/* Right column */}
+      <div className="w-1/4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
         <MathPanel />
       </div>
     </div>
   );
 }
+
 
 
 
